@@ -19,19 +19,19 @@ sudo apt install ffmpeg libsdl2-2.0-0 adb wget \
 ```
 
 Then clone the repo and execute the installation script
-([source](install_release.sh)):
+([source](build.sh)):
 
 ```bash
 git clone https://github.com/Genymobile/scrcpy
 cd scrcpy
-./install_release.sh
+./build.sh install
 ```
 
 When a new release is out, update the repo and reinstall:
 
 ```bash
 git pull
-./install_release.sh
+./build.sh install
 ```
 
 To uninstall:
@@ -260,8 +260,7 @@ set ANDROID_SDK_ROOT=%LOCALAPPDATA%\Android\sdk
 Then, build:
 
 ```bash
-meson setup x --buildtype=release --strip -Db_lto=true
-ninja -Cx  # DO NOT RUN AS ROOT
+./build.sh build
 ```
 
 _Note: `ninja` [must][ninja-user] be run as a non-root user (only `ninja
@@ -281,9 +280,7 @@ Download the prebuilt server somewhere, and specify its path during the Meson
 configuration:
 
 ```bash
-meson setup x --buildtype=release --strip -Db_lto=true \
-    -Dprebuilt_server=/path/to/scrcpy-server
-ninja -Cx  # DO NOT RUN AS ROOT
+./build.sh build /path/to/scrcpy-server
 ```
 
 The server only works with a matching client version (this server works with the
