@@ -17,13 +17,13 @@ It focuses on:
  - **lightness**: native, displays only the device screen
  - **performance**: 30~120fps, depending on the device
  - **quality**: 1920×1080 or above
- - **low latency**: [35~70ms][lowlatency]
+ - **low latency**: [35~70ms][low-latency]
  - **low startup time**: ~1 second to display the first image
  - **non-intrusiveness**: nothing is left installed on the Android device
  - **user benefits**: no account, no ads, no internet required
  - **freedom**: free and open source software
 
-[lowlatency]: https://github.com/Genymobile/scrcpy/pull/646
+[low-latency]: https://github.com/Genymobile/scrcpy/pull/646
 
 Its features include:
  - [recording](#recording)
@@ -40,7 +40,7 @@ Its features include:
 
 The Android device requires at least API 21 (Android 5.0).
 
-Make sure you [enable adb debugging][enable-adb] on your device(s).
+Make sure you [enable ADB debugging][enable-adb] on your device(s).
 
 [enable-adb]: https://developer.android.com/studio/command-line/adb.html#Enabling
 
@@ -381,14 +381,14 @@ An option `--tcpip` allows to configure the connection automatically. There are
 two variants.
 
 If the device (accessible at 192.168.1.1 in this example) already listens on a
-port (typically 5555) for incoming _adb_ connections, then run:
+port (typically 5555) for incoming `adb` connections, then run:
 
 ```bash
 scrcpy --tcpip=192.168.1.1       # default port is 5555
 scrcpy --tcpip=192.168.1.1:5555
 ```
 
-If _adb_ TCP/IP mode is disabled on the device (or if you don't know the IP
+If `adb` TCP/IP mode is disabled on the device (or if you don't know the IP
 address), connect the device over USB, then run:
 
 ```bash
@@ -485,7 +485,7 @@ autoadb scrcpy -s '{}'
 #### Tunnels
 
 To connect to a remote device, it is possible to connect a local `adb` client to
-a remote `adb` server (provided they use the same version of the _adb_
+a remote `adb` server (provided they use the same version of the `adb`
 protocol).
 
 ##### Remote ADB server
@@ -1080,35 +1080,35 @@ _<kbd>[Super]</kbd> is typically the <kbd>Windows</kbd> or <kbd>Cmd</kbd> key._
 
 [Super]: https://en.wikipedia.org/wiki/Super_key_(keyboard_button)
 
- | Action                                      |   Shortcut
- | ------------------------------------------- |:-----------------------------
- | Switch fullscreen mode                      | <kbd>MOD</kbd>+<kbd>f</kbd>
- | Rotate display left                         | <kbd>MOD</kbd>+<kbd>←</kbd> _(left)_
- | Rotate display right                        | <kbd>MOD</kbd>+<kbd>→</kbd> _(right)_
- | Resize window to 1:1 (pixel-perfect)        | <kbd>MOD</kbd>+<kbd>g</kbd>
- | Resize window to remove black borders       | <kbd>MOD</kbd>+<kbd>w</kbd> \| _Double-left-click¹_
- | Click on `HOME`                             | <kbd>MOD</kbd>+<kbd>h</kbd> \| _Middle-click_
- | Click on `BACK`                             | <kbd>MOD</kbd>+<kbd>b</kbd> \| _Right-click²_
- | Click on `APP_SWITCH`                       | <kbd>MOD</kbd>+<kbd>s</kbd> \| _4th-click³_
- | Click on `MENU` (unlock screen)⁴            | <kbd>MOD</kbd>+<kbd>m</kbd>
- | Click on `VOLUME_UP`                        | <kbd>MOD</kbd>+<kbd>↑</kbd> _(up)_
- | Click on `VOLUME_DOWN`                      | <kbd>MOD</kbd>+<kbd>↓</kbd> _(down)_
- | Click on `POWER`                            | <kbd>MOD</kbd>+<kbd>p</kbd>
- | Power on                                    | _Right-click²_
- | Turn device screen off (keep mirroring)     | <kbd>MOD</kbd>+<kbd>o</kbd>
- | Turn device screen on                       | <kbd>MOD</kbd>+<kbd>Shift</kbd>+<kbd>o</kbd>
- | Rotate device screen                        | <kbd>MOD</kbd>+<kbd>r</kbd>
- | Expand notification panel                   | <kbd>MOD</kbd>+<kbd>n</kbd> \| _5th-click³_
- | Expand settings panel                       | <kbd>MOD</kbd>+<kbd>n</kbd>+<kbd>n</kbd> \| _Double-5th-click³_
- | Collapse panels                             | <kbd>MOD</kbd>+<kbd>Shift</kbd>+<kbd>n</kbd>
- | Copy to clipboard⁵                          | <kbd>MOD</kbd>+<kbd>c</kbd>
- | Cut to clipboard⁵                           | <kbd>MOD</kbd>+<kbd>x</kbd>
- | Synchronize clipboards and paste⁵           | <kbd>MOD</kbd>+<kbd>v</kbd>
- | Inject computer clipboard text              | <kbd>MOD</kbd>+<kbd>Shift</kbd>+<kbd>v</kbd>
- | Enable/disable FPS counter (on stdout)      | <kbd>MOD</kbd>+<kbd>i</kbd>
- | Pinch-to-zoom                               | <kbd>Ctrl</kbd>+_click-and-move_
- | Drag & drop APK file                        | Install APK from computer
- | Drag & drop non-APK file                    | [Push file to device](#push-file-to-device)
+| Action                                  | Shortcut                                                        |
+|-----------------------------------------|:----------------------------------------------------------------|
+| Switch fullscreen mode                  | <kbd>MOD</kbd>+<kbd>f</kbd>                                     |
+| Rotate display left                     | <kbd>MOD</kbd>+<kbd>←</kbd> _(left)_                            |
+| Rotate display right                    | <kbd>MOD</kbd>+<kbd>→</kbd> _(right)_                           |
+| Resize window to 1:1 (pixel-perfect)    | <kbd>MOD</kbd>+<kbd>g</kbd>                                     |
+| Resize window to remove black borders   | <kbd>MOD</kbd>+<kbd>w</kbd> \| _Double-left-click¹_             |
+| Click on `HOME`                         | <kbd>MOD</kbd>+<kbd>h</kbd> \| _Middle-click_                   |
+| Click on `BACK`                         | <kbd>MOD</kbd>+<kbd>b</kbd> \| _Right-click²_                   |
+| Click on `APP_SWITCH`                   | <kbd>MOD</kbd>+<kbd>s</kbd> \| _4th-click³_                     |
+| Click on `MENU` (unlock screen)⁴        | <kbd>MOD</kbd>+<kbd>m</kbd>                                     |
+| Click on `VOLUME_UP`                    | <kbd>MOD</kbd>+<kbd>↑</kbd> _(up)_                              |
+| Click on `VOLUME_DOWN`                  | <kbd>MOD</kbd>+<kbd>↓</kbd> _(down)_                            |
+| Click on `POWER`                        | <kbd>MOD</kbd>+<kbd>p</kbd>                                     |
+| Power on                                | _Right-click²_                                                  |
+| Turn device screen off (keep mirroring) | <kbd>MOD</kbd>+<kbd>o</kbd>                                     |
+| Turn device screen on                   | <kbd>MOD</kbd>+<kbd>Shift</kbd>+<kbd>o</kbd>                    |
+| Rotate device screen                    | <kbd>MOD</kbd>+<kbd>r</kbd>                                     |
+| Expand notification panel               | <kbd>MOD</kbd>+<kbd>n</kbd> \| _5th-click³_                     |
+| Expand settings panel                   | <kbd>MOD</kbd>+<kbd>n</kbd>+<kbd>n</kbd> \| _Double-5th-click³_ |
+| Collapse panels                         | <kbd>MOD</kbd>+<kbd>Shift</kbd>+<kbd>n</kbd>                    |
+| Copy to clipboard⁵                      | <kbd>MOD</kbd>+<kbd>c</kbd>                                     |
+| Cut to clipboard⁵                       | <kbd>MOD</kbd>+<kbd>x</kbd>                                     |
+| Synchronize clipboards and paste⁵       | <kbd>MOD</kbd>+<kbd>v</kbd>                                     |
+| Inject computer clipboard text          | <kbd>MOD</kbd>+<kbd>Shift</kbd>+<kbd>v</kbd>                    |
+| Enable/disable FPS counter (on stdout)  | <kbd>MOD</kbd>+<kbd>i</kbd>                                     |
+| Pinch-to-zoom                           | <kbd>Ctrl</kbd>+_click-and-move_                                |
+| Drag & drop APK file                    | Install APK from computer                                       |
+| Drag & drop non-APK file                | [Push file to device](#push-file-to-device)                     |
 
 _¹Double-click on black borders to remove them._  
 _²Right-click turns the screen on if it was off, presses BACK otherwise._  
