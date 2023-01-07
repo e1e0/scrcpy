@@ -2,6 +2,8 @@
 
 <img src="app/data/icon.svg" width="128" height="128" alt="scrcpy" align="right" />
 
+**https://github.com/Genymobile/scrcpy/issues/3498**
+
 _pronounced "**scr**een **c**o**py**"_
 
 [Read in another language](#translations)
