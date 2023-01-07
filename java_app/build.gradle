@@ -1,0 +1,16 @@
+plugins {
+    id 'java-library'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_16
+    targetCompatibility = JavaVersion.VERSION_16
+}
+javafx {
+    version = "18.0.2"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.media' ]
+}
+//noinspection GroovyUnusedAssignment
+mainClassName = 'com.example.scrcpy_java_app.Main'

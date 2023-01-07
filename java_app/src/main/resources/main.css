@@ -1,0 +1,9 @@
+.root {
+    -fx-background-color: #2A4040;
+}
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}

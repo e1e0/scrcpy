@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<VBox>
+    <Separator />
+    <ScrollPane hbarPolicy="AS_NEEDED" style="-fx-padding: .2em;">
+        <HBox>
+            <Text text="Shortcuts:&#10;(MODIFIER: left alt)" textAlignment="center"
+                style="-fx-fill: white;"/>
+        </HBox>
+    </ScrollPane>
+</VBox>
