@@ -6,9 +6,9 @@ _pronounced "**scr**een **c**o**py**"_
 
 [Read in another language](#translations)
 
-This application provides display and control of Android devices connected via
-USB or [over TCP/IP](#tcpip-wireless). It does not require any _root_ access.
-It works on _GNU/Linux_, _Windows_ and _macOS_.
+This application provides display mirroring and control of Android devices,
+connected via USB or [over TCP/IP](#tcpip-wireless). It does not require any
+_root_ access. It works on _GNU/Linux_, _Windows_ and _macOS_.
 
 ![screenshot](assets/screenshot-debian-600.jpg)
 
