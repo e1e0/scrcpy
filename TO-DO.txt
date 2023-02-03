@@ -1,0 +1,5 @@
+TODO tasks:
+ - scrcpy -> screenCP
+ - library for scrcpy clients wanted
+ - Bluetooth sound (audio) help (?)
+ - Issue
