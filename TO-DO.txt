@@ -1,5 +1,8 @@
 TODO tasks:
  - scrcpy -> screenCP
- - library for scrcpy clients wanted
+ - A library in scrcpy for clients is wanted.
+   Adding a server interface library (API) for clients, "no debugging" option,
+   (#3728 https://github.com/Genymobile/scrcpy/issues/3728)
+   Not to use developer options (_adb debugging_): connection to server device IP port (Wi-Fi) ??
  - Bluetooth sound (audio) help (?)
- - Issue
+ - Issue?
